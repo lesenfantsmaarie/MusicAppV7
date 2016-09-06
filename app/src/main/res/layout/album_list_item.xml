@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:longClickable="true"
+    android:background="@android:drawable/list_selector_background">
+
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:paddingRight="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_img" />
+
+    <TextView
+        android:id="@+id/tv_item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/iv_item_image"
+        android:padding="6dp"
+        android:text="Title" />
+
+    <TextView
+        android:id="@+id/tv_item_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_item_image"
+        android:layout_toRightOf="@id/iv_item_image"
+        android:padding="6dp"
+        android:text="Genre" />
+
+    <RatingBar
+        android:id="@+id/rb_item_rating"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="12dp"
+        android:clickable="false"
+        android:max="5"
+        android:layout_marginTop="12dp"
+        android:rating="5" />
+
+    <TextView
+        android:id="@+id/tv_item_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cb_item_favorite"
+        android:layout_alignBottom="@+id/cb_item_favorite"
+        android:layout_marginRight="12dp"
+        android:text="2009" />
+
+    <CheckBox
+        android:id="@+id/cb_item_favorite"
+        android:checked="true"
+        android:clickable="false"
+        android:layout_alignBottom="@id/iv_item_image"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
